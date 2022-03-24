@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Management System</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class = "container">
+	<div class = "row">
+		<table class = "table table-striped table-bordered">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Student First Name</th>
+					<th scope="col">Student Last Name</th>
+					<th scope="col">Student Email</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each = "student: ${students}">
+					<td th:text="${student.id}">Default Value</td>
+					<td th:text="${student.firstName}">Default Value</td>
+					<td th:text="${student.lastName}">Default Value</td>
+					<td th:text="${student.email}">Default Value</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+</body>
+</html>
