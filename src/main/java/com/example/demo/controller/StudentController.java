@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.entity.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,15 @@ public class StudentController {
 		model.addAttribute("students", studentService.getAllStudents());
 		return "students";
 	}
-	
-	
-	
+
+	@GetMapping("/students/new")
+	public String createStudenForm(Model model){
+
+		//Create student object to hold student form data
+		//Student student = new Student();
+
+		//model.addAttribute("student", student);
+		return "create_student";
+	}
+
 }

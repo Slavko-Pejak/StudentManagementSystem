@@ -11,9 +11,7 @@ import com.example.demo.service.StudentService;
 @Service
 public class StudentServiceImpl implements StudentService{
 	private StudentRepository studentRepository;
-	
-	
-	
+
 	public StudentServiceImpl(StudentRepository studentRepository) {
 		super();
 		this.studentRepository = studentRepository;
